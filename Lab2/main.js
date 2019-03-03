@@ -11,7 +11,7 @@ var fakeType = {
 var roseFlower = {
     id: "1",
     name: "Rose",
-    quantity: "10",
+    quantity: 10,
     colors: ["Blue", "Red", "Green"],
     isExotic: false,
     type: fakeType
@@ -20,7 +20,7 @@ var roseFlower = {
 var amaryllisFlower = {
     id: "2",
     name: "Amaryllis",
-    quantity: "20",
+    quantity: 20,
     colors: ["Blue", "Green"],
     isExotic: true,
     type: realType
@@ -55,7 +55,7 @@ var updateFlower = function(flower, name) {
     flowers[flowers.indexOf(flower)].name = name
 }
 
-var searchFlower = function(flowerId) {
+var searchFlowerById = function(flowerId) {
     var searchedElement = 0;
     flowers.forEach(element => {
         if (element.id === flowerId) {
@@ -67,7 +67,14 @@ var searchFlower = function(flowerId) {
     } else {
         return searchedElement
     }
-    
+}
+
+var searchFlowersByType = function(type) {
+    return flowers.filter(element => element.type === type)
+}
+
+var searchFlowerByName = function(name) {
+    return flowers.filter(element => element.name == name)
 }
 
 console.log("Start!")
@@ -78,7 +85,7 @@ console.log("Adding a new flower...")
 var orchideaFlower = {
     id: "3",
     name: "Orchidea",
-    quantity: "39",
+    quantity: 39,
     colors: ["Blue"],
     isExotic: true,
     type: fakeType
@@ -108,10 +115,10 @@ console.log("Database:")
 console.log(flowers)
 console.log("")
 console.log("Searching a flower with id = 2 ...")
-console.log(searchFlower("2"))
+console.log(searchFlowerById("2"))
 console.log("")
 console.log("Searching a flower with id = 3 ...")
-console.log(searchFlower("3"))
+console.log(searchFlowerById("3"))
 console.log("")
 console.log("")
 console.log("")
@@ -119,4 +126,8 @@ console.log("")
 console.log("Every flower with quantity bigger than 11...")
 const result = flowers.filter(element => element.quantity > 11);
 console.log(result)
+console.log("")
+
+console.log("Every flower with real type...")
+console.log(searchFlowersByType(realType))
 console.log("")
