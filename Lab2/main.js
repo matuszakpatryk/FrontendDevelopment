@@ -68,7 +68,6 @@ var searchFlowerById = function(flowerId) {
         return searchedElement
     }
 }
-
 var searchFlowersByType = function(type) {
     return flowers.filter(element => element.type === type)
 }
