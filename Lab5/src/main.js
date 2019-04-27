@@ -105,10 +105,7 @@ class FakeFlower extends Flower {
     }
 }
 
-var realType = new RealType("Real", 8)
-var fakeType = new FakeType("Fake", 23)
-
-var orchideaFakeFlower = new FakeFlower("123Orch", "Orchidea", 10, 12.99, true, ["White", "Blue", "Red"], fakeType, "Plastic")
+var orchideaFakeFlower = new FakeFlower("123Orch", "Orchidea", 10, 12.99, true, ["White", "Blue", "Red"], new FakeType("Fake", 23), "Plastic")
 console.log(orchideaFakeFlower)
 orchideaFakeFlower.waterMe()
 orchideaFakeFlower.decreaseQuantity(2)
