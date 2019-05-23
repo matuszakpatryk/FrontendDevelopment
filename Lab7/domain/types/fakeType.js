@@ -1,4 +1,4 @@
-var FlowerType = require('../domain/flowerType')
+var FlowerType = require('./flowerType')
 
 class FakeType extends FlowerType {
     constructor(name, vat) {

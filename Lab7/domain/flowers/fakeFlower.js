@@ -1,4 +1,4 @@
-var Flower = require('../domain/flower')
+var Flower = require('./flower')
 
 class FakeFlower extends Flower {
     constructor(id, name, quantity, price, colors, isExotic, type, material) {

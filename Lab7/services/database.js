@@ -1,7 +1,7 @@
-let fakeFlowers = require('../domain/fakeFlower')
-let realFlowers = require('../domain/realFlower')
-let fakeTypes = require('../domain/fakeType')
-let realTypes = require('../domain/realType')
+let fakeFlowers = require('../domain/flowers/fakeFlower')
+let realFlowers = require('../domain/flowers/realFlower')
+let fakeTypes = require('../domain/types/fakeType')
+let realTypes = require('../domain/types/realType')
 
 let FakeFlower = fakeFlowers.FakeFlower;
 let RealFlower = realFlowers.RealFlower;
